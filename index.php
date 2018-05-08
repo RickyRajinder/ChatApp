@@ -11,7 +11,8 @@
             <label><b>Enter Username:</b></label>
             <input type="text" name="username" placeholder="Username"><br><br>
             <label><b>Enter Password:</b></label>
-            <input type="text" name="password" placeholder="Password"><br><br>
+            <input class="login-field  login-field-password form-control input-lg" name="password" id="password" type="password" placeholder="Password" />
+            <br><br>
             <button type="submit"><b></b>Login</button>
         </form>
 
@@ -22,11 +23,25 @@
             <label>Enter Username:</label>
             <input type="text" name="username" placeholder="Username"><br><br>
             <label>Enter Password:</label>
-            <input type="text" name="password" placeholder="Password"><br><br>
+            <input class="login-field  login-field-password form-control input-lg" name="password" id="password" type="password" placeholder="Password" />
+            <br><br>
             <button type="submit"><b></b>Sign Up</button>
         </form>
 
     </div>
 </div>
+
+<script>
+    $("#showHide").click(function () {
+        if ($(".login-field-password").attr("type") == "password") {
+            $(".login-field-password").attr("type", "text");
+            $("#showHide").text("Hide");
+
+        } else {
+            $(".login-field-password").attr("type", "password");
+            $("#showHide").text("Show");
+        }
+    });
+    </script>
 </body>
 </html>
